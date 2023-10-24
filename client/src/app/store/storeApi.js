@@ -5,25 +5,22 @@ export const storeApi = createApi({
     reducerPath: 'storeApi',
     baseQuery: fetchBaseQuery({ baseUrl: ' http://localhost:5000/api/v1' }),
     endpoints: (builder) => ({
-        getUsers: builder.query({
-            query: () => `/auth/login`,
-        }),
-        getPosts: builder.query({
-            query: () => `/products`,
+        getHomeContent: builder.query({
+            query: () => `/home`,
         }),
         getPostsById: builder.query({
             query: (id) => `/products/${id}`,
           }),
-        addPost: builder.mutation({
+        addHomeContent: builder.mutation({
             query: (data) => ({
-                url: '/products',
+                url: '/home',
                 method: 'POST',
                 body: data,
             }),
         }),
-        updatePost: builder.mutation({
+        updateHomeContent: builder.mutation({
             query: ({ id, data }) => ({
-              url: `/update/${id}`,
+              url: `/edit-home/${id}`,
               method: 'PUT',
               body: data,
             }),
@@ -65,7 +62,9 @@ export const storeApi = createApi({
 })
 
 export const {
-    useGetUsersQuery,
+    useGetHomeContentQuery,
+    useAddHomeContentMutation,
+    useUpdateHomeContentMutation,
     useAddPostMutation,
     useGetPostsQuery,
     useGetPostsByIdQuery,

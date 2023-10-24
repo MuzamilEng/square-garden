@@ -1,17 +1,17 @@
 import React from 'react'
 import { home_data } from '../Data'
 
-const Footer = () => {
+const Footer = ({footerDescription, footerText, footerLinks, footerLogoImage}) => {
   return (
     <>
     {home_data?.map((item, index) => {
       return <div className="footer1" key={index}>
         {item?.footer?.map((footer, index) => {
           return <div key={index} className='footer'>
-            <img src={footer?.image} className='footer_img' alt={item?.title} />
+            <img src={footerLogoImage} className='footer_img' alt={item?.title} />
             <img src={footer?.img2} className='footer_img2' alt={item?.title} />
-            <p>{footer?.info}</p>
-            <span>{footer?.para}</span>
+            <p>{footerDescription}</p>
+            <span>{footerText}</span>
           </div>
         })}
         <div className="nav_list">

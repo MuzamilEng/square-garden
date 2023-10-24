@@ -78,7 +78,9 @@
     letter-spacing: .1vw;
     margin-top: 1.6vw;
 }
-
+.icon{
+    cursor: pointer;
+}
 .article {
     position: absolute;
     top: 63.17715959004392vw;
@@ -189,7 +191,7 @@
     color: #000;
     font-weight: bolder;
     line-height: 2.5vw;
-    width: 40.06310395314788vw;
+    width: 41.06310395314788vw;
     font-family: 'PT-serif', serif;
     ;
 }
@@ -198,7 +200,7 @@
     width: 100%;
     /* width: 1366vw; */
     padding: 5vw;
-    padding-left: 2.999865432vw;
+    padding-left: 26.999865432vw;
     /* height: 13.030746705710103vw; */
     position: absolute;
     font-family: 'Bebas Neue', serif;
